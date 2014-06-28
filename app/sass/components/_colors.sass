@@ -1,0 +1,81 @@
+// This is the color manifest file where all colors are collected and named.
+// Do not throw a "#575757" somewhere into a stylesheet.
+// Please use an abstract color like $font-color or a named color like $dark-grey.
+// If you are white-labeling the app, it is imperative to only use abstract color names like $background-color or even unique element colors like $frontpage-teaser-border-color.
+
+// Color Palette
+//--------------
+// Be creative in finding expressive color names instead of introducing red, another-red, and yet-another-red.
+// The HTML color names may inspire you: http://html-color-codes.info/color-names/
+// Try to differentiate colors by characterizing them with adjectives
+// e.g. light vs. dark, silent vs. loud, muted/decent vs. vibrant/bright
+// Please use hsl values because you can conveniently compare and fiddle with its components.
+$whiter-grey:                       hsl(0, 0%, 98%)
+$white-grey:                        hsl(0, 0%, 96%)
+$light-grey:                        hsl(0, 0%, 90%)
+$grey:                              hsl(0, 0%, 65%)
+$dark-grey:                         hsl(0, 0%, 50%)
+$darker-grey:                       hsl(0, 0%, 40%)
+$black-grey:                        hsl(0, 0%, 30%)
+
+$dark-blue:                         hsl(191, 100%, 34%)
+$darker-blue:                       hsl(209, 26%, 21%)
+$green:                             hsl(87, 84%, 37%)
+$dark-green:                        hsl(87, 50%, 25%)
+$light-green:                       hsl(88, 38%, 92%)
+$decent-orange:                     hsl(13, 100%, 64%)
+$light-orange:                      hsl(17, 100%, 75%)
+$decent-yellow:                     hsl(48, 100%, 47%)
+
+// Header Colors, to overwrite them easily later one
+// ----------------
+$header-color:                      $darker-blue
+$subheader-color:                   $dark-blue
+
+// Ticket Type Colors
+// ----------------
+$ticket-feature-color:              transparentize($green, .5) //hsl(87, 58%, 76%)
+$ticket-support-color:              transparentize($dark-blue, .5) //hsl(203, 36%, 68%)
+$ticket-bug-color:                  transparentize($decent-orange, .5) //hsl(8, 100%, 89%)
+
+$ticket-bug-dark-color:             shade($ticket-bug-color, 25%)
+$ticket-support-dark-color:         shade($ticket-support-color, 25%)
+$ticket-feature-dark-color:         shade($ticket-feature-color, 25%)
+
+// Highlight Colors
+//-----------------
+$accent-color:                      $dark-blue
+$area-accent-color:                 tint($accent-color, 20%)
+$hot-spot-color:                    $light-orange
+
+// Indication Colors
+//------------------
+$positive-color:                    $green
+$negative-color:                    $decent-orange
+
+$success-color:                     $positive-color
+$notice-color:                      $decent-yellow
+$error-color:                       $negative-color
+
+$selected-color:                    $accent-color
+$disabled-color:                    $light-grey
+
+// Background Colors
+//------------------
+$background-color:                  $light-grey
+$alternative-background-color:      mix($background-color, $green, 15%)
+$panel-background-color:            white
+
+// Font Colors
+//------------
+$font-color:                        $black-grey
+$inverted-font-color:               white
+$unobtrusive-font-color:            $dark-grey
+$silent-font-color:                 $grey
+$headline-color:                    $accent-color
+
+// Border & Shadow Colors
+//-----------------------
+$border-color:                      $grey
+$light-border-color:                $light-grey
+$box-shadow-color:                  transparentize($dark-grey, 0.6)

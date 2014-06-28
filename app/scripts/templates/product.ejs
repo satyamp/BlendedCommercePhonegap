@@ -1,0 +1,13 @@
+<img src="http://178.254.25.56/<%= attributes.media.default_image %>" class="article--image">
+
+<div class="article--content">
+  <strong class="article--main-tag">Kategorie</strong>
+  <h1 class="headline-h1"><%= attributes.product_data.name %></h1>
+  <p><%= attributes.product_data.description %></p>
+
+  <div class="article--actions">
+    <div class="article--price"><%= attributes.product_data.price %> €</div>
+    <div class="smaller">Versand per Auto möglich</div>
+    <a href="#" id="addToCart" class="button primary">In den Warenkorb</a>
+  </div>
+</div>

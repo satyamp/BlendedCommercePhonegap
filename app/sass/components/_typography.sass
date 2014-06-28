@@ -1,0 +1,80 @@
+// General Sizes, Paddings and Margins
+//------------------------------------
+$standard-margin-bottom: 20px
+@mixin standard-margin-bottom
+  margin-bottom: $standard-margin-bottom
+
+$standard-font-size: 14px
+@mixin standard-font-size
+  font-size: $standard-font-size
+
+$standard-line-height: 1.562
+@mixin standard-line-height
+  line-height: $standard-line-height
+
+// Fonts
+//------
+@mixin heading-serif-font
+  font-family: 'Unna', 'Bodoni', 'Didot', serif
+
+@mixin content-sans-serif-font
+  font-family: 'Pontano Sans', sans-serif
+
+.heading-font
+  +heading-serif-font
+
+.content-font
+  +content-sans-serif-font
+
+// Improve rendering of small light fonts on dark backgrounds
+//-----------------------------------------------------------
+@mixin improved-font-rendering
+  font-kerning: normal
+  -webkit-font-kerning: normal
+  -moz-font-kerning: normal
+
+// Base Styles
+//------------
+// Please be cautious. Do not start a specificity war by defining too much base styles.
+body
+  +content-sans-serif-font
+  font-size: 14px
+  line-height: 1.5217
+  color: $font-color
+
+p
+  margin: 0
+  & + p
+    text-indent: .5em
+
+// Headline Styling
+//-----------------
+// Please do not style h1, h2 etc. because these tags rarely have the same styling on every page.
+.headline-h1
+  +heading-serif-font
+  font-size: 2.9em
+  line-height: 1.125
+  margin: 0 0 .313em 0
+  word-spacing: -0.05em
+  letter-spacing: -0.02em
+
+.headline-h2
+  +heading-serif-font
+  font-size: 1.65em
+  line-height: 1.167
+  margin: 0 0 .417em 0
+  word-spacing: -0.025em
+  letter-spacing: -0.01em
+
+.article--main-tag
+  display: block
+  font-size: 1em
+  line-height: 2
+  margin: 0 0 0.4em 0
+  text-transform: uppercase
+  letter-spacing: .313em
+  color: $dark-grey
+  word-spacing: 0.08em
+
+.smaller
+  font-size: .8em
