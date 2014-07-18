@@ -3,6 +3,7 @@ window.mmpApp =
   Collections: {}
   Views: {}
   Routers: {}
+  Helpers: {}
   Settings: {
     defaultUrl: "http://178.254.25.56"
   }
@@ -15,6 +16,8 @@ window.mmpApp =
 
     rootView = new @Views.RootView
     rootView.render()
+
+    events = new @Helpers.EventHelper(@Helpers.PusherEventHelper)
 
 $ ->
   'use strict'

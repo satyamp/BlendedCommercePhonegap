@@ -1,3 +1,5 @@
+<a href="" id="backLink" class="button rounded emphasized">&lsaquo;</a>
+
 <img src="http://178.254.25.56/<%= attributes.media.default_image %>" class="article--image">
 
 <div class="article--content">
@@ -8,6 +10,10 @@
   <div class="article--actions">
     <div class="article--price"><%= attributes.product_data.price %> €</div>
     <div class="smaller">Versand per Auto möglich</div>
-    <a href="#" id="addToCart" class="button primary">In den Warenkorb</a>
+    <div class="article--buttons">
+      <a href="#" id="addToCart" class="button primary full-width">In den Warenkorb</a>
+      <a href="#" id="fakeCheckout" class="button full-width">Fake Checkout</a>
+    </div>
   </div>
+
 </div>

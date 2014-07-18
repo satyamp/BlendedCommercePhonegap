@@ -3,9 +3,17 @@
   +border-radius(.4em)
   padding: .4em 1em
   margin: 1em 0
-  border: 1px solid $font-color
+  border: 1px solid tint($font-color, 60%)
   color: $font-color
   text-decoration: none
+  text-align: center
   &.primary
     background: $font-color
     color: white
+  &.full-width
+    width: 100%
+  &.rounded
+    +border-radius(50%)
+  &.emphasized
+    font-weight: bold
+    background: transparentize(white, .7)

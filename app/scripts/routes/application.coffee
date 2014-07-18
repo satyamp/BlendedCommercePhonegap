@@ -6,7 +6,8 @@ class mmpApp.Routers.ApplicationRouter extends Backbone.Router
     'product/:id' : 'showProduct'
 
   rootRoute: ->
-    console.log "Allo, from the root route"
+    rootView = new mmpApp.Views.RootView
+    rootView.render()
 
   showProduct: (id) ->
     product = new mmpApp.Models.ProductModel { id: id }

@@ -1,3 +1,6 @@
+*
+  +box-sizing(border-box)
+
 body
   margin: 0
   padding: 0
@@ -11,14 +14,9 @@ body
   text-align: center
   margin-top: 200px
 
-.article--image
+#backLink
   position: fixed
-  width: 100%
-  margin-bottom: .5em
-
-.article--content
-  position: absolute
-  top: 400px
-  padding: 1.2em
-  background: white
-  +box-shadow(0 -2px 5px transparentize(black, .9))
+  top: .5em
+  left: 1em
+  // Ridiculous z-index
+  z-index: 200
