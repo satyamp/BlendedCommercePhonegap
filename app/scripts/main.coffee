@@ -10,7 +10,9 @@ window.mmpApp =
   init: ->
     'use strict'
 
-    @appRouter = new @Routers.ApplicationRouter()
+    if nfc
+      alert "I can haz NFC?"
+
     usePushState = Modernizr.history
     Backbone.history.start { pushState: false}
 
