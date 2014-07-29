@@ -8,7 +8,11 @@
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
-    <name>HelloWorld</name>
+    <feature name="NfcPlugin">
+        <param name="android-package" value="com.chariotsolutions.nfc.plugin.NfcPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <name>købing</name>
     <description>
         Hello World sample application that responds to the deviceready event.
     </description>
@@ -49,6 +53,7 @@
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
+    <gap:plugin name="com.chariotsolutions.nfc.plugin" />
     <icon src="icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="res/icon/android/icon-48-mdpi.png" />
@@ -75,8 +80,4 @@
     <gap:splash gap:platform="ios" height="768" src="res/screen/ios/screen-ipad-landscape.png" width="1024" />
     <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
     <access origin="*" />
-    <feature name="NfcPlugin">
-        <param name="android-package" value="com.chariotsolutions.nfc.plugin.NfcPlugin" />
-        <param name="onload" value="true" />
-    </feature>
 </widget>

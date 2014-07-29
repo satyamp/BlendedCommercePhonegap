@@ -1,15 +1,23 @@
 .button
   display: inline-block
-  +border-radius(.4em)
+  +border-radius(.15em)
   padding: .4em 1em
   margin: 1em 0
-  border: 1px solid tint($font-color, 60%)
+  border: 1px solid $font-color
   color: $font-color
+  +heading-serif-font
+  letter-spacing: 0.01em
   text-decoration: none
   text-align: center
   &.primary
-    background: $font-color
+    border: none
+    background: $accent-color
     color: white
+    font-size: 1.25em
+    font-weight: 600
+  &.inverse
+    color: white
+    border-color: white
   &.full-width
     width: 100%
   &.rounded

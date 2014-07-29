@@ -15,10 +15,10 @@ $standard-line-height: 1.562
 // Fonts
 //------
 @mixin heading-serif-font
-  font-family: 'Unna', 'Bodoni', 'Didot', serif
+  font-family: 'Telefon', sans-serif
 
 @mixin content-sans-serif-font
-  font-family: 'Pontano Sans', sans-serif
+  font-family: 'PT Serif', 'Adobe Caslon', Times, serif
 
 .heading-font
   +heading-serif-font
@@ -60,11 +60,19 @@ p
 
 .headline-h2
   +heading-serif-font
-  font-size: 1.65em
+  font-size: 2.2em
   line-height: 1.167
   margin: 0 0 .417em 0
   word-spacing: -0.025em
-  letter-spacing: -0.01em
+
+.headline-h3
+  +heading-serif-font
+  margin: 0 0 .5em
+  font-size: 1.2em
+  font-weight: 600
+  text-transform: uppercase
+  letter-spacing: .07em
+  line-height: 1
 
 .article--main-tag
   display: block
@@ -78,3 +86,19 @@ p
 
 .smaller
   font-size: .8em
+
+.larger
+  font-size: 1.2em
+
+// Attribute list
+.attribute-label, .attribute-value
+  display: block
+
+.attribute-label
+  font-size: .8em
+  line-height: 1.5
+  +opacity(.6)
+
+.attribute-value
+  @extend .larger
+  font-weight: 600

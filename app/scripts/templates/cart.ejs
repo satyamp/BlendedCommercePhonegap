@@ -1,0 +1,30 @@
+<% if(collection.models.length > 0) { %>
+  <section class="cart">
+    <% for(var i=0; i<collection.models.length; i++) { %>
+      <div class="cart--entry">
+        <img src="http://178.254.25.56<%= collection.models[i].attributes.default_image %>" class="cart--entry-thumbnail">
+        <div class="cart--entry-info">
+          <h3 class="headline-h3"><%= collection.models[i].attributes.name %></h3>
+          <span class="cart--entry-meta">
+            <%= collection.models[i].attributes.quantity %> Stk.
+          </span>
+        </div>
+        <div class="cart--entry-price">
+          <%= collection.models[i].attributes.total %>€
+        </div>
+      </div>
+    <% } %>
+    <div class="cart--entry total">
+      <div class="cart--entry-price">
+        <%= Math.round(collection.getTotal() * 100) / 100 %>€
+      </div>
+    </div>
+  </section>
+  <div class="cart--actions">
+    <a href="#" class="button primary full-width">Zur Kasse</a>
+  </div>
+<% } else { %>
+  <div class="cart cart--empty">
+    <h2>Deine Tasche ist leer</h2>
+  </div>
+<% } %>

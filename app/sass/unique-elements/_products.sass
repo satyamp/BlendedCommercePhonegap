@@ -5,23 +5,56 @@
 
 .article--content
   position: absolute
-  top: 400px
-  padding: 1.2em
+  top: 470px
+  padding: 1.2em 0 0
   background: white
   +box-shadow(0 -2px 5px transparentize(black, .9))
 
+.article--intro
+  padding: 0 1em
+  margin-bottom: 2em
+  text-align: center
+  p
+    font-size: 1.25em
+    line-height: 1.6
+
+.article--box
+  background: $black-grey
+  color: white
+
 .article--actions
-  background: $white-grey
-  margin: 1em 0 0 0
-  padding: 1em
+  padding: 1.5em 1em
+  border-bottom: 1px solid $light-grey
+  margin: 2em 0 0
   line-height: 1
 
 .article--price
+  float: left
+  padding-top: .2em
   +heading-serif-font
-  font-size: 2.2em
+  font-size: 1.8em
+  font-weight: 600
+
+.article--size
+  float: right
+  text-align: right
+  +heading-serif-font
 
 .article--buttons
-  margin-top: 1em
+  clear: both
+  margin-top: 3em
   .button
     padding: .8em
     margin: 0 0 .5em
+
+.article--details
+  padding: 0 1em
+  margin: 3em 0 0
+  text-align: center
+  line-height: 1.7
+  p
+    font-size: 1.1em
+
+.article--related
+  margin: 3em 0 0
+  padding: 1.5em 1em

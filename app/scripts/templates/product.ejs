@@ -1,19 +1,32 @@
-<a href="" id="backLink" class="button rounded emphasized">&lsaquo;</a>
+<a href="" id="backLink" class="header--button">&lsaquo;</a>
 
 <img src="http://178.254.25.56/<%= attributes.media.default_image %>" class="article--image">
 
 <div class="article--content">
-  <strong class="article--main-tag">Kategorie</strong>
-  <h1 class="headline-h1"><%= attributes.product_data.name %></h1>
-  <p><%= attributes.product_data.description %></p>
+  <div class="article--intro">
+    <h1 class="headline-h2"><%= attributes.product_data.name %></h1>
+    <p><%= attributes.product_data.short_description %></p>
+  </div>
 
-  <div class="article--actions">
+  <div class="article--box article--actions">
     <div class="article--price"><%= attributes.product_data.price %> €</div>
-    <div class="smaller">Versand per Auto möglich</div>
-    <div class="article--buttons">
-      <a href="#" id="addToCart" class="button primary full-width">In den Warenkorb</a>
-      <a href="#" id="fakeCheckout" class="button full-width">Fake Checkout</a>
+    <div class="article--size">
+      <span class="attribute-label">Ihre Größe</span>
+      <span class="attribute-value">M</span>
     </div>
+    <div class="article--buttons">
+      <a href="#" id="addToCart" class="button primary full-width">In meine Tasche</a>
+      <a href="#" id="fakeCheckout" class="button inverse full-width">Fake Checkout</a>
+    </div>
+  </div>
+
+  <div class="article--details">
+    <h2 class="headline-h3">Weitere Details</h3>
+    <p><%= attributes.product_data.description %></p>
+  </div>
+
+  <div class="article--box article--related">
+    <h2 class="headline-h3">Dazu passt</h2>
   </div>
 
 </div>

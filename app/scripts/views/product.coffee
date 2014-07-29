@@ -9,20 +9,37 @@ class mmpApp.Views.ProductView extends Backbone.View
       "click #fakeCheckout"   : "fakeCheckout"
       "click #backLink"       : "back"
 
+    addModel: (model) ->
+      @model = model
+
     render: ->
-      if navigator.notification
-        navigator.notification.vibrate(400)
       @$el.html @template @model
+
+      lastScrollTop = 0
+      delta = 100
+
+      $(window).on 'scroll', (e) ->
+        st = $(this).scrollTop()
+
+        if Math.abs(lastScrollTop - st) <= delta
+          return
+
+        if st > lastScrollTop
+          $('.header--button').addClass('toggled')
+        else
+          $('.header--button').removeClass('toggled')
+
+        lastScrollTop = st
 
     addToCart: (e) ->
       e.preventDefault()
       @model.addToCart ->
-        alert "Product added to cart"
+        mmpApp.appCart.fetch()
 
     fakeCheckout: (e) ->
       e.preventDefault()
       @model.checkout ->
-        alert "Checked out, check the backend for the order!"
+        console.log "do something"
 
     back: (e) ->
       e.preventDefault()

@@ -10,9 +10,14 @@ window.mmpApp =
   init: ->
     'use strict'
 
-    if nfc
-      alert "I can haz NFC?"
+    document.addEventListener "deviceready", =>
+      # NFC Event Listener
+      nfcEvents = new @Helpers.EventHelper(@Helpers.NFCEventHelper)
 
+    @appCart = new @Collections.CartCollection()
+    @identity = new @Helpers.IdentityHelper()
+
+    @appRouter = new @Routers.ApplicationRouter()
     usePushState = Modernizr.history
     Backbone.history.start { pushState: false}
 

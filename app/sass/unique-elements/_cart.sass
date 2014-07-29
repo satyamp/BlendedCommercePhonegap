@@ -1,0 +1,37 @@
+.cart
+  padding: 1em
+
+.cart--entry
+  +clearfix
+  padding-bottom: 1em
+  border-bottom: 1px solid $font-color
+  margin-bottom: 1em
+  &.total
+    padding-top: 1em
+    border-top: 2px solid $font-color
+    border-bottom: none
+    margin-top: -1em
+    margin-bottom: 0
+
+.cart--entry-thumbnail
+  float: left
+  height: 100px
+  width: auto
+  display: none
+
+.cart--entry-info
+  float: left
+  margin-left: 1em
+
+.cart--entry-price
+  float: right
+  +heading-serif-font
+  font-weight: 600
+  font-size: 1.4em
+  .cart--entry.total &
+    font-size: 1.7em
+
+.cart--actions
+  padding: 1.5em 1em
+  background: $black-grey
+  color: white
