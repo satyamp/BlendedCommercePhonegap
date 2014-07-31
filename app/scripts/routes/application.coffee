@@ -11,7 +11,6 @@ class mmpApp.Routers.ApplicationRouter extends Backbone.Router
   routes:
     ''            : 'rootRoute'
     'product/:id' : 'showProduct'
-    'cart'        : 'showCart'
 
   rootRoute: ->
     rootView = new mmpApp.Views.RootView
@@ -23,7 +22,3 @@ class mmpApp.Routers.ApplicationRouter extends Backbone.Router
     deferred.done =>
       @productView.addModel product
       @productView.render()
-
-  showCart: ->
-    cartView = new mmpApp.Views.CartView mmpApp.appCart
-    cartView.render()

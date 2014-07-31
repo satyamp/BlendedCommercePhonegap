@@ -4,8 +4,6 @@ class mmpApp.Views.RootView extends Backbone.View
 
     template: JST['app/scripts/templates/root.ejs']
     el: "#app-body"
-    events:
-      "click #fakeInteraction"   : "showProduct"
 
     render: ->
       @$el.html @template()
