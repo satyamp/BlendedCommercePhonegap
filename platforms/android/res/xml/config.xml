@@ -12,12 +12,12 @@
         <param name="android-package" value="com.chariotsolutions.nfc.plugin.NfcPlugin" />
         <param name="onload" value="true" />
     </feature>
-    <name>købing</name>
+    <name>KØB</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+      Blended Commerce App
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="hello@lucas-nolte.com" href="http://lucas-nolte.com">
+        Lucas Nolte
     </author>
     <preference name="permissions" value="none" />
     <preference name="phonegap-version" value="3.4.0" />
