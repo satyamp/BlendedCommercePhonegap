@@ -10,13 +10,22 @@ window.mmpApp =
   init: ->
     'use strict'
 
+    @eventDispatcher = new @Helpers.EventHelper
+
+    @identity = new @Helpers.IdentityHelper()
     document.addEventListener "deviceready", =>
       # NFC Event Listener
-      nfcEvents = new @Helpers.EventHelper(@Helpers.NFCEventHelper)
+      @eventDispatcher.addAdapter @Helpers.NFCEventHelper
+
+      # Override existing identiy
+      @identity.refresh()
+
+      # App Cart needs refresher
+      @appCart.fetch()
 
     @appCart = new @Collections.CartCollection()
-    @identity = new @Helpers.IdentityHelper()
 
+    @appModal = new @Views.ModalView()
     @appRouter = new @Routers.ApplicationRouter()
     usePushState = Modernizr.history
     Backbone.history.start { pushState: false}
@@ -24,7 +33,7 @@ window.mmpApp =
     rootView = new @Views.RootView
     rootView.render()
 
-    events = new @Helpers.EventHelper(@Helpers.PusherEventHelper)
+    @eventDispatcher.addAdapter @Helpers.PusherEventHelper
 
 $ ->
   'use strict'

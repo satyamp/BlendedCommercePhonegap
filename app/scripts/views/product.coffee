@@ -14,6 +14,8 @@ class mmpApp.Views.ProductView extends Backbone.View
 
     render: ->
       @$el.html @template @model
+      @$el.find('.article--image').on 'load', () ->
+        $(this).addClass 'loaded'
 
       lastScrollTop = 0
       delta = 100

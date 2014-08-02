@@ -5,5 +5,10 @@ class mmpApp.Helpers.PusherEventHelper
     @channel = @pusher.subscribe('test_channel')
 
   listen: (eventHandler) ->
-    @channel.bind "showProduct", (data) =>
-      eventHandler.showProduct data.id
+    @channel.bind_all (data) =>
+      # Deconstruct the Event
+      message = data.split ":"
+      event = message[0]
+      data = message[1]
+
+      eventHandler.broadcast event, data

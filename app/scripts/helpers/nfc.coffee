@@ -16,7 +16,7 @@ class mmpApp.Helpers.NFCEventHelper
       event = message[0]
       data = message[1]
 
-      @events[event](data, eventHandler)
+      eventHandler.broadcast event, data
 
     , () ->
       console.log "Waiting for tag"

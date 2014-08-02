@@ -1,8 +1,8 @@
 class mmpApp.Helpers.EventHelper
 
-  constructor: (adapter) ->
-    @adapter = new adapter
-    @adapter.listen this
+  addAdapter: (adapter) ->
+    instance = new adapter
+    instance.listen this
 
-  showProduct: (id) ->
-    mmpApp.appRouter.navigate "product/#{id}", { trigger: true }
+  broadcast: (event, data) ->
+    $.publish(event, data)

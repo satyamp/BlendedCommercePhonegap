@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+var Pusher = require('pusher');
+process.stdin.resume();
+process.stdin.setEncoding('utf8');
+var util = require('util');
+
+var pusher = new Pusher({
+  appId: '52621',
+  key: '53fcdc31927d1aaf9cdd',
+  secret: '26f02c2f48a1cda1136b'
+});
+
+console.log("Enter a command to send to the app then hit Enter:");
+
+process.stdin.on('data', function (text) {
+    text = text.substring(0, text.length - 1);
+    if (text === 'quit') {
+      process.exit();
+    }
+    pusher.trigger("test_channel", text, {});
+  });

@@ -41,7 +41,9 @@
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/robots.txt \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/scripts \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/styles \
+/Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/images/5c26f99f.screen.png \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/images/7080a0e5.splash.jpg \
+/Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/images/f2e333c2.phone.png \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/plugins/com.chariotsolutions.nfc.plugin \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/plugins/org.apache.cordova.device \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/plugins/com.chariotsolutions.nfc.plugin/www \
@@ -49,10 +51,10 @@
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/plugins/org.apache.cordova.device/www \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/plugins/org.apache.cordova.device/www/device.js \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/scripts/a084fdc3.vendor.js \
-/Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/scripts/aa3c1f57.main.js \
+/Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/scripts/a9f84095.main.js \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/scripts/vendor \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/scripts/vendor/d7100892.modernizr.js \
-/Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/styles/19bef6ef.main.css \
+/Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/styles/3ac1c4f8.main.css \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/styles/fonts \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/styles/fonts/Telefon-Bold.eot \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/styles/fonts/Telefon-Bold.svg \

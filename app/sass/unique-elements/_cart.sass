@@ -8,20 +8,22 @@
   margin-bottom: 1em
   &.total
     padding-top: 1em
-    border-top: 2px solid $font-color
+    border-top: 1px solid $font-color
     border-bottom: none
     margin-top: -1em
     margin-bottom: 0
 
-.cart--entry-thumbnail
-  float: left
-  height: 100px
-  width: auto
-  display: none
-
 .cart--entry-info
   float: left
-  margin-left: 1em
+
+.cart--entry-name
+  margin: 0
+  line-height: 1
+  text-transform: none
+
+.cart--entry-meta
+  @extend .smaller
+  color: tint($font-color, 20%)
 
 .cart--entry-price
   float: right
@@ -31,7 +33,18 @@
   .cart--entry.total &
     font-size: 1.7em
 
+.cart--entry-total-label
+  font-weight: 400
+  font-size: .55em
+  text-transform: uppercase
+  color: tint($font-color, 40%)
+  letter-spacing: 0.01em
+
 .cart--actions
-  padding: 1.5em 1em
+  padding: .5em 1em
   background: $black-grey
   color: white
+  .button
+    margin: .4em 0
+  .button.inverse
+    +opacity(.7)
