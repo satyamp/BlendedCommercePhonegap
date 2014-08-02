@@ -26,3 +26,4 @@ class mmpApp.Views.CartView extends Backbone.View
 
     render: ->
       mmpApp.appModal.render @template collection: @collection
+

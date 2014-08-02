@@ -37,6 +37,8 @@ class mmpApp.Views.ProductView extends Backbone.View
       e.preventDefault()
       @model.addToCart ->
         mmpApp.appCart.fetch()
+        thanksModal = new mmpApp.Views.addToCartView()
+        thanksModal.render()
 
     fakeCheckout: (e) ->
       e.preventDefault()
@@ -46,3 +48,11 @@ class mmpApp.Views.ProductView extends Backbone.View
     back: (e) ->
       e.preventDefault()
       mmpApp.appRouter.navigate "/", { trigger: true }
+
+# Added to Cart Modal
+class mmpApp.Views.addToCartView extends Backbone.View
+
+    template: JST['app/scripts/templates/addedToCart.ejs']
+
+    render: ->
+      mmpApp.appModal.render @template()

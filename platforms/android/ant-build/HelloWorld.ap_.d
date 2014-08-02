@@ -50,11 +50,11 @@
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/plugins/com.chariotsolutions.nfc.plugin/www/phonegap-nfc.js \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/plugins/org.apache.cordova.device/www \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/plugins/org.apache.cordova.device/www/device.js \
+/Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/scripts/2d044f7b.main.js \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/scripts/a084fdc3.vendor.js \
-/Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/scripts/a9f84095.main.js \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/scripts/vendor \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/scripts/vendor/d7100892.modernizr.js \
-/Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/styles/3ac1c4f8.main.css \
+/Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/styles/02cc4906.main.css \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/styles/fonts \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/styles/fonts/Telefon-Bold.eot \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/styles/fonts/Telefon-Bold.svg \
