@@ -27,11 +27,10 @@ window.mmpApp =
 
     @appModal = new @Views.ModalView()
     @appRouter = new @Routers.ApplicationRouter()
+
     usePushState = Modernizr.history
     Backbone.history.start { pushState: false}
 
-    rootView = new @Views.RootView
-    rootView.render()
 
     @eventDispatcher.addAdapter @Helpers.PusherEventHelper
 

@@ -1,0 +1,96 @@
+// Require Helpers
+@import compass/utilities
+@import compass/css3
+
+// Helper Functions
+//=================
+@function default-prefix()
+  @return nth($grid-prefixes, 1)
+
+@function column-width($column, $prefix)
+  $ratio: nth($grid-columns-ratio, index($grid-prefixes, $prefix))
+  $width: nth($grid-column-width, index($grid-prefixes, $prefix))
+  @if $ratio == 'even'
+    @return $width
+  @else
+    $factor: nth($ratio, $column)
+    @return $width * $factor
+
+@function colspan-to-width($from, $to, $prefix, $include-final-gutter: false)
+  $width: 0
+  $gutter-width: grid-gutter-width($prefix)
+  @while $from <= $to
+    $width: $width + column-width($from, $prefix) + $gutter-width
+    $from: $from + 1
+
+  @return $width - if($include-final-gutter, 0, $gutter-width)
+
+@function unit-height($unit, $prefix)
+  @return nth($grid-unit-height, index($grid-prefixes, $prefix))
+
+@function module-to-height($from, $to, $prefix)
+  $height: 0
+  $gutter-height: grid-gutter-height($prefix)
+  @while $from <= $to
+    $height: $height + unit-height($from, $prefix) + $gutter-height
+    $from: $from + 1
+
+  @return $height
+
+@function grid-unit-offset($from, $prefix)
+  @return module-to-height(1, $from, $prefix)
+
+@function grid-width($prefix: default-prefix())
+  $columns: nth($grid-columns, index($grid-prefixes, $prefix))
+  @return colspan-to-width(1, $columns, $prefix)
+
+@function grid-gutters($prefix: default-prefix())
+  $columns: nth($grid-columns, index($grid-prefixes, $prefix))
+  @return $grid-columns - 1
+
+@function grid-gutter-width($prefix)
+  @return nth($grid-gutter-width, index($grid-prefixes, $prefix))
+
+@function grid-gutter-height($prefix)
+  @return nth($grid-gutter-height, index($grid-prefixes, $prefix))
+
+// Public Mixins
+//==============
+=grid-container($prefix: default-prefix(), $columns-only: true)
+  @if $columns-only
+    +clearfix
+  position: relative
+  width: grid-width($prefix)
+  margin: 0 auto
+
+=column($from, $to, $prefix: default-prefix())
+  +column-behavior
+  width: colspan-to-width($from, $to, $prefix)
+  margin-right: grid-gutter-width($prefix)
+
+=unit($from, $to, $prefix: default-prefix(), $layer: 1)
+  +unit-behavior
+  top: grid-unit-offset($from, $prefix)
+  z-index: $layer
+  height: module-to-height($from, $to, $prefix)
+  margin-bottom: grid-gutter-height($prefix)
+
+=last
+  margin-right: 0
+
+=last-column($from, $to, $prefix: default-prefix())
+  +column($from, $to, $prefix)
+  +last
+
+=offset($from, $to, $prefix: default-prefix())
+  margin-left: colspan-to-width($from, $to, $prefix, $include-final-gutter: true)
+
+// Internal Methods
+//=================
+=column-behavior
+  float: left
+  +box-sizing(border-box)
+
+=unit-behavior
+  position: absolute
+  overflow: hidden

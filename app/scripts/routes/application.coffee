@@ -8,9 +8,14 @@ class mmpApp.Routers.ApplicationRouter extends Backbone.Router
 
     mmpApp.appCart.fetch()
 
+    $.subscribe "checkout", =>
+      @navigate "/checkout", { trigger: true }
+
+
   routes:
     ''            : 'rootRoute'
     'product/:id' : 'showProduct'
+    'checkout'    : 'checkout'
 
   rootRoute: ->
     rootView = new mmpApp.Views.RootView
@@ -22,3 +27,7 @@ class mmpApp.Routers.ApplicationRouter extends Backbone.Router
     deferred.done =>
       @productView.addModel product
       @productView.render()
+
+  checkout: ->
+    checkoutView = new mmpApp.Views.CheckoutView mmpApp.appCart
+    checkoutView.render()

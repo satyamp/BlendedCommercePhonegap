@@ -1,2 +1,21 @@
-<p>Your content here.</p>
+<% if(collection.length > 0) { %>
+  <section class="view--container centered" id="checkout">
+    <h1 class="headline-h1">Bezahlen</h1>
 
+    <h2 class="headline-h2"><%= collection.getFormatedTotal() %>€</h2>
+
+    <p>Folgende Zahlungsinfomrationen sind auf deinem Telefon gespeichert</p>
+    <p>Kreditkart xxx-123 (VISA)</p>
+
+    <div class="view--actions">
+      <a href="#" class="button primary full-width" id="checkoutButton">Bezahlen</a>
+    </div>
+
+  </section>
+<% } else { %>
+  <section class="view--section centered">
+    <h1 class="headline-h1">Deine Tasche ist leer</h1>
+    <p>Bitte lege erst Artikel in deine Tasche bevor du zur Kasse gehst.</p>
+    <a href="#" class="button primary full-width">Einkauf fortsetzen</a>
+  </section>
+<% } %>
