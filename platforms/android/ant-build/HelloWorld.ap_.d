@@ -50,8 +50,8 @@
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/plugins/com.chariotsolutions.nfc.plugin/www/phonegap-nfc.js \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/plugins/org.apache.cordova.device/www \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/plugins/org.apache.cordova.device/www/device.js \
-/Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/scripts/a084fdc3.vendor.js \
-/Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/scripts/f92857d6.main.js \
+/Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/scripts/74cf91fd.main.js \
+/Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/scripts/b7cbfccb.vendor.js \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/scripts/vendor \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/scripts/vendor/d7100892.modernizr.js \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/styles/2dcf9260.main.css \

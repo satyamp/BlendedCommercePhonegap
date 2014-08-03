@@ -7,7 +7,6 @@ class mmpApp.Views.ProductView extends Backbone.View
     events:
       "click #addToCart"                : "addToCart"
       "click #backLink"                 : "back"
-      "click .article--carousel-item"   : "toggleCarousel"
       "click .related-products--item"   : "viewRelated"
 
     initialize: ->
@@ -21,6 +20,9 @@ class mmpApp.Views.ProductView extends Backbone.View
       @$el.html @template model: @model, collection: @collection
       @$el.find('.article--image').on 'load', () ->
         $(this).addClass 'loaded'
+
+      @$el.find('article--carousel-item-wrapper').hammer().bind "swiperight", ->
+        $(this).addClass 'toggled'
 
       lastScrollTop = 0
       delta = 100
