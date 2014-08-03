@@ -5,9 +5,10 @@ class mmpApp.Views.ProductView extends Backbone.View
     template: JST['app/scripts/templates/product.ejs']
     el: "#app-body"
     events:
-      "click #addToCart"                : "addToCart"
-      "click #backLink"                 : "back"
-      "click .related-products--item"   : "viewRelated"
+      "click #addToCart"                  : "addToCart"
+      "click #backLink"                   : "back"
+      "click .related-products--item"     : "viewRelated"
+      "click .article--size-picker-size"  : "changeSize"
 
     initialize: ->
       @collection = new mmpApp.Collections.ProductsCollection()
@@ -62,6 +63,10 @@ class mmpApp.Views.ProductView extends Backbone.View
       sku = $(e.currentTarget).data "sku"
       mmpApp.appRouter.navigate "/product/#{sku}", { trigger: true }
       window.scrollTo 0,0
+
+    changeSize: (e) ->
+      @$el.find('.article--size-picker-size').removeClass "active"
+      $(e.currentTarget).addClass "active"
 
 # Added to Cart Modal
 class mmpApp.Views.addToCartView extends Backbone.View
