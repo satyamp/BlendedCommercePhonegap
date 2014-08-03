@@ -1,7 +1,18 @@
-.article--image
+.article--carousel
   position: fixed
   width: 100%
+  +clearfix
   margin-bottom: .5em
+
+.article--carousel-item-wrapper
+  width: 200%
+  +transition(margin .3s ease-in-out)
+  &.toggled
+    margin-left: -100%
+
+.article--carousel-item
+  width: 50%
+  float: left
   +opacity(0)
   +transition(opacity .3s ease-in-out)
   &.loaded
@@ -23,8 +34,7 @@
     line-height: 1.6
 
 .article--box
-  background: $black-grey
-  color: white
+  background: $white-grey
 
 .article--actions
   padding: 1.5em 1em

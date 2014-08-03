@@ -9,7 +9,8 @@ class mmpApp.Views.ModalView extends Backbone.View
     "click .close"          : "unrender"
 
   unrender: (e) ->
-    e.preventDefault()
+    if e?
+      e.preventDefault()
     @$el.find('.modal--container').fadeOut(500, () ->
       $(this).remove()
     )
@@ -17,6 +18,6 @@ class mmpApp.Views.ModalView extends Backbone.View
   render: (contents) ->
     @$el.find('.modal--container').remove()
     @modal = $ @template()
-    console.log @modal.find('.modal--window').html contents
+    @modal.find('.modal--window').html contents
     @$el.append @modal
     @$el.find('.modal--container').fadeIn()

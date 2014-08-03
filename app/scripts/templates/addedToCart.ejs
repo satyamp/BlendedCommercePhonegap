@@ -4,4 +4,11 @@
 </section>
 <section class="modal--window-content-action">
   <h2 class="headline-h3">Dazu passt</h2>
+  <ul class="related-products">
+    <% collection.models.forEach(function(model) { %>
+      <li class="related-products--item close" data-sku="<%= model.attributes.product_data.sku %>">
+        <img src="http://178.254.25.56/<%= model.attributes.media.default_image %>" class="related-products--item-thumbnail">
+      </li>
+    <% }) %>
+  </ul>
 </section>

@@ -1,15 +1,20 @@
 <a href="" id="backLink" class="header--button">&lsaquo;</a>
 
-<img src="http://178.254.25.56/<%= attributes.media.default_image %>" class="article--image">
+<div class="article--carousel">
+  <div class="article--carousel-item-wrapper">
+    <img src="http://178.254.25.56/<%= model.attributes.media.default_image %>" class="article--image article--carousel-item">
+    <img src="http://178.254.25.56/<%= model.attributes.media.secondary_image %>" class="article--image article--carousel-item">
+  </div>
+</div>
 
 <div class="article--content">
   <div class="article--intro">
-    <h1 class="headline-h2"><%= attributes.product_data.name %></h1>
-    <p><%= attributes.product_data.short_description %></p>
+    <h1 class="headline-h2"><%= model.attributes.product_data.name %></h1>
+    <p><%= model.attributes.product_data.short_description %></p>
   </div>
 
   <div class="article--box article--actions">
-    <div class="article--price"><%= attributes.product_data.price %> €</div>
+    <div class="article--price"><%= model.attributes.product_data.price %> €</div>
     <div class="article--size">
       <span class="attribute-label">Ihre Größe</span>
       <span class="attribute-value">M</span>
@@ -21,11 +26,18 @@
 
   <div class="article--details">
     <h2 class="headline-h3">Weitere Details</h3>
-    <p><%= attributes.product_data.description %></p>
+    <p><%= model.attributes.product_data.description %></p>
   </div>
 
   <div class="article--box article--related">
     <h2 class="headline-h3">Dazu passt</h2>
+    <ul class="related-products">
+      <% collection.models.forEach(function(model) { %>
+        <li class="related-products--item" data-sku="<%= model.attributes.product_data.sku %>">
+          <img src="http://178.254.25.56/<%= model.attributes.media.default_image %>" class="related-products--item-thumbnail">
+        </li>
+      <% }) %>
+    </ul>
   </div>
 
 </div>
