@@ -9,15 +9,22 @@
 
 <div class="article--content">
   <div class="article--intro">
-    <h1 class="headline-h2"><%= model.attributes.product_data.name %></h1>
+    <h1 class="headline-h2 article--title"><%= model.attributes.product_data.name %></h1>
+    <small class="article--sku">Artikelnummer: <%= model.attributes.product_data.sku %></small>
+    <h2 class="article--price">€ <%= model.attributes.product_data.price %></h2>
     <p><%= model.attributes.product_data.short_description %></p>
   </div>
 
   <div class="article--box article--actions">
-    <div class="article--price"><%= model.attributes.product_data.price %> €</div>
-    <div class="article--size">
-      <span class="attribute-label">Ihre Größe</span>
-      <span class="attribute-value">M</span>
+    <div class="article--size-picker centered">
+      <h2 class="headline-h3">Größe</h2>
+      <ul class="article--size-picker-sizes">
+        <li class="article--size-picker-size">XS</li>
+        <li class="article--size-picker-size">S</li>
+        <li class="article--size-picker-size active">M</li>
+        <li class="article--size-picker-size">L</li>
+        <li class="article--size-picker-size">XL</li>
+      </ul>
     </div>
     <div class="article--buttons">
       <a href="#" id="addToCart" class="button primary full-width">In meine Tasche</a>

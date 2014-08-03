@@ -30,33 +30,32 @@
   margin-bottom: 2em
   text-align: center
   p
-    font-size: 1.25em
-    line-height: 1.6
-
-.article--box
-  background: $white-grey
+    font-size: 1.2em
+    line-height: 1.5
+    color: tint($font-color, 30%)
 
 .article--actions
-  padding: 1.5em 1em
-  border-bottom: 1px solid $light-grey
-  margin: 2em 0 0
+  padding: 2em 1em 1.5em
+  border:
+    top: 1px solid $light-grey
+    bottom: 1px solid $light-grey
   line-height: 1
 
+.article--title
+  margin-bottom: .1em
+
+.article--sku
+  color: $grey
+  font-style: italic
+
 .article--price
-  float: left
-  padding-top: .2em
+  margin: .3em 0 .6em
   +heading-serif-font
   font-size: 1.8em
   font-weight: 600
 
-.article--size
-  float: right
-  text-align: right
-  +heading-serif-font
-
 .article--buttons
   clear: both
-  margin-top: 3em
   .button
     padding: .8em
     margin: 0 0 .5em
@@ -69,6 +68,28 @@
   p
     font-size: 1.1em
 
+.article--size-picker-sizes
+  list-style: none
+  padding: 0
+  margin: 1em 0
+
+.article--size-picker-size
+  +inline-block
+  width: 19%
+  padding: 1em
+  border: 1px solid transparentize($font-color, .5)
+  margin-right: (10% / 4%)
+  +heading-serif-font
+  +opacity(.6)
+  +transition(all .3s ease-in-out)
+  &:last-child
+    margin-right: 0
+  &.active
+    background: $black-grey
+    color: white
+    +opacity(1)
+
 .article--related
+  background: $white-grey
   margin: 3em 0 0
   padding: 1.5em 1em
