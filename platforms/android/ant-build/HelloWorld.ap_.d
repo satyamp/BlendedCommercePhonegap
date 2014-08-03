@@ -54,7 +54,7 @@
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/scripts/b7cbfccb.vendor.js \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/scripts/vendor \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/scripts/vendor/d7100892.modernizr.js \
-/Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/styles/ea8ffd32.main.css \
+/Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/styles/49f2da6a.main.css \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/styles/fonts \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/styles/fonts/Telefon-Bold.eot \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/styles/fonts/Telefon-Bold.svg \
