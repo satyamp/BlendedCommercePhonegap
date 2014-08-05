@@ -1,4 +1,76 @@
 @font-face {
+  font-family: 'Caslon';
+  src: url('fonts/ACaslonPro-Bold.eot'); /* IE9 Compat Modes */
+  src: url('fonts/ACaslonPro-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/ACaslonPro-Bold.woff') format('woff'), /* Modern Browsers */
+       url('fonts/ACaslonPro-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/ACaslonPro-Bold.svg#09ec7fcf3550cc6d857e9fb1a17c52a9') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'Caslon';
+  src: url('fonts/ACaslonPro-BoldItalic.eot'); /* IE9 Compat Modes */
+  src: url('fonts/ACaslonPro-BoldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/ACaslonPro-BoldItalic.woff') format('woff'), /* Modern Browsers */
+       url('fonts/ACaslonPro-BoldItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/ACaslonPro-BoldItalic.svg#9acb471246c7d3d57fd8c9d40eeb95fd') format('svg'); /* Legacy iOS */
+       
+  font-style:   italic;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'Caslon';
+  src: url('fonts/ACaslonPro-Italic.eot'); /* IE9 Compat Modes */
+  src: url('fonts/ACaslonPro-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/ACaslonPro-Italic.woff') format('woff'), /* Modern Browsers */
+       url('fonts/ACaslonPro-Italic.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/ACaslonPro-Italic.svg#0956a2a00d489b0636498748d7bd9cc3') format('svg'); /* Legacy iOS */
+       
+  font-style:   italic;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Caslon';
+  src: url('fonts/ACaslonPro-Regular.eot'); /* IE9 Compat Modes */
+  src: url('fonts/ACaslonPro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/ACaslonPro-Regular.woff') format('woff'), /* Modern Browsers */
+       url('fonts/ACaslonPro-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/ACaslonPro-Regular.svg#66be995022d6f507f528f15386d1e64f') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('fonts/FuturaStd-Bold.eot'); /* IE9 Compat Modes */
+  src: url('fonts/FuturaStd-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/FuturaStd-Bold.woff') format('woff'), /* Modern Browsers */
+       url('fonts/FuturaStd-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/FuturaStd-Bold.svg#e6614ac1ffeb97962de474601fd3ce1d') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('fonts/FuturaStd-Book.eot'); /* IE9 Compat Modes */
+  src: url('fonts/FuturaStd-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/FuturaStd-Book.woff') format('woff'), /* Modern Browsers */
+       url('fonts/FuturaStd-Book.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/FuturaStd-Book.svg#db02aa682b3e193ac55da3558b4b0d6e') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
   font-family: 'Telefon';
   src: url('fonts/Telefon-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
   font-style:   normal;
@@ -11,4 +83,3 @@
   font-style:   normal;
   font-weight:  400;
 }
-

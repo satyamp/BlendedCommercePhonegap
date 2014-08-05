@@ -18,7 +18,7 @@ $standard-line-height: 1.562
   font-family: 'Telefon', sans-serif
 
 @mixin content-sans-serif-font
-  font-family: 'Poly', 'Adobe Caslon', Times, serif
+  font-family: 'Caslon', Times, serif
 
 .heading-font
   +heading-serif-font
@@ -74,6 +74,12 @@ p
   letter-spacing: .07em
   line-height: 1
 
+.headline-h4
+  +heading-serif-font
+  font-size: 1.1em
+  line-height: 1
+  margin: 0
+
 .article--main-tag
   display: block
   font-size: 1em
@@ -84,7 +90,7 @@ p
   color: $dark-grey
   word-spacing: 0.08em
 
-.smaller
+small, .smaller
   font-size: .8em
 
 .larger
@@ -92,6 +98,10 @@ p
 
 .centered
   text-align: center
+
+.label
+  +heading-serif-font
+  font-size: 1.2em
 
 // Attribute list
 .attribute-label, .attribute-value

@@ -16,6 +16,7 @@ class mmpApp.Routers.ApplicationRouter extends Backbone.Router
     ''            : 'rootRoute'
     'product/:id' : 'showProduct'
     'checkout'    : 'checkout'
+    'cashier'     : 'cashier'
 
   rootRoute: ->
     rootView = new mmpApp.Views.RootView
@@ -31,3 +32,7 @@ class mmpApp.Routers.ApplicationRouter extends Backbone.Router
   checkout: ->
     checkoutView = new mmpApp.Views.CheckoutView mmpApp.appCart
     checkoutView.render()
+
+  cashier: ->
+    cashierView = new mmpApp.Views.CashierView
+    cashierView.render()

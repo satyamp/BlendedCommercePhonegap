@@ -1,16 +1,35 @@
 <% if(collection.length > 0) { %>
-  <section class="view--container centered" id="checkout">
-    <h1 class="headline-h1">Bezahlen</h1>
-
-    <h2 class="headline-h2"><%= collection.getFormatedTotal() %>€</h2>
-
-    <p>Folgende Zahlungsinfomrationen sind auf deinem Telefon gespeichert</p>
-    <p>Kreditkart xxx-123 (VISA)</p>
-
-    <div class="view--actions">
-      <a href="#" class="button primary full-width" id="checkoutButton">Bezahlen</a>
+  <section id="checkout">
+    <div id="checkout--total" class="centered">
+      <div id="checkout--total-price"><%= collection.getFormatedTotal() %>€</div>
+      <div id="checkout--total-count"><%= collection.getCount() %> Artikel</div>
     </div>
-
+    <section id="checkout--payment">
+      <div id="checkout--payment-title">
+        <h3 class="headline-h4 centered">Hinterlegte Kreditkarte</h3>
+      </div>
+      <form id="checkout--payment-saved-card">
+        <div class="checkout--form-entry">
+          <label class="checkout--form-label" for="card">
+            Karte
+          </label>
+          <input type="text" class="checkout--form-input credit-card visa" name="card" id="card" value="•••• •••• •••• 4242">
+        </div>
+        <div class="checkout--form-entry">
+          <label class="checkout--form-label" for="valid">
+            Gültig bis
+          </label>
+          <input type="text" class="checkout--form-input" name="valid" id="valid" value="10 / 2016">
+        </div>
+        <div class="checkout--form-entry">
+          <label class="checkout--form-label" for="cvc">
+            CVC
+          </label>
+          <input type="text" class="checkout--form-input" name="cvc" id="cvc" value="•••">
+        </div>
+      </form>
+      <a href="#" class="button primary full-width" id="checkoutButton">Jetzt Bezahlen</a>
+    </section>
   </section>
 <% } else { %>
   <section class="view--section centered">
