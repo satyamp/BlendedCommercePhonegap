@@ -26,7 +26,7 @@ class mmpApp.Views.CheckoutView extends Backbone.View
       @$el.find("#checkout").removeClass 'entry'
 
     render: ->
-      @collection.on "change", @render, @
+      @collection.on "add change", @render, @
       if @collection.length > 0
         @collection.triggerCashier()
       @$el.html @template collection: @collection

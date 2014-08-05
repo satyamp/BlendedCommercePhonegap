@@ -1,0 +1,29 @@
+#cashier-view
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: $accent-color
+  color: white
+  padding-top: 4em
+
+#cashier--modal
+  .show-when-paid
+    display: none
+  &.paid
+    .hide-when-paid
+      display: none
+    .show-when-paid
+      display: block
+      background: $green
+      color: white
+      text-align: center
+
+#cashier--payment
+  &.paid
+    background: $green
+    color: white
+
+#cashier--payment-label
+  padding: 1em 0

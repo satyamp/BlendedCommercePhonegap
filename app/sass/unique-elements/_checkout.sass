@@ -1,0 +1,71 @@
+#checkout
+  overflow: hidden
+
+#checkout--total
+  position: relative
+  background: $black-grey
+  height: 273px
+  color: white
+  +heading-serif-font
+  font-weight: 400
+  font-size: 2.8em
+  +transition(all .3s ease-in-out)
+  &:after
+    content: " "
+    position: absolute
+    bottom: -10px
+    left: 50%
+    margin-left: -5px
+    border-left: 10px solid transparent
+    border-right: 10px solid transparent
+    border-top: 10px solid $black-grey
+  #checkout.entry &
+    font-size: 1.4em
+    color: transparentize(white, .5)
+    height: 50px
+    padding: 10px
+
+#checkout--total-price
+  padding-top: 85px
+  margin: 0
+
+#checkout--total-count
+  font-size: 14px
+  +opacity(.7)
+
+#checkout--payment
+  +heading-serif-font
+
+#checkout--payment-title
+  background: $white-grey
+  padding: 1.4em 1em
+  border-bottom: 1px solid transparentize(black, .95)
+
+#checkoutButton
+  margin: 0
+  padding:
+    top: .7em
+    bottom: .7em
+
+.checkout--form-entry
+  +clearfix
+  border-bottom: 1px solid transparentize(black, .9)
+  &:last-child
+    border-bottom: none
+
+.checkout--form-label
+  display: block
+  float: left
+  padding: 22px 0 22px 16px
+  font-size: .9em
+  width: 25%
+
+.checkout--form-input
+  +heading-serif-font
+  font-size: 16px
+  font-weight: 600
+  float: right
+  width: 75%
+  padding: 22px 16px 22px 0
+  border: none
+  outline: none

@@ -1,0 +1,34 @@
+<section id="cashier--modal">
+  <% if(collection.models.length > 0) { %>
+    <section class="cart modal--window-content-section hide-when-paid">
+      <h1 class="headline-h1">Kunde möchte bezahlen</h1>
+      <% for(var i=0; i<collection.models.length; i++) { %>
+        <div class="cart--entry">
+          <div class="cart--entry-info">
+            <h3 class="headline-h3 cart--entry-name"><%= collection.models[i].attributes.name %></h3>
+            <span class="cart--entry-meta">
+              <%= collection.models[i].attributes.quantity %> Stück
+            </span>
+          </div>
+          <div class="cart--entry-price">
+            <%= collection.models[i].attributes.total %>€
+          </div>
+        </div>
+      <% } %>
+      <div class="cart--entry total">
+        <div class="cart--entry-price">
+          <span class="cart--entry-total-label">Summe:</span>
+          <%= Math.round(collection.getTotal() * 100) / 100 %>€
+        </div>
+      </div>
+    </section>
+    <div class="cart--actions centered hide-when-paid">
+      <p class="label" id="cashier--payment-label">Auf kontaktlose Bezahlung durch Kunden warten...</p>
+      <a href="#" class="button inverse full-width" id="markAsPaid">Als bar bezahlt markieren</a>
+    </div>
+    <section class="modal--window-content-section show-when-paid">
+      <h2 class="headline-h2">Bezahlt</h2>
+      <p class="label">Die Bestellung wurde vom Kunden bezahlt...</p>
+    </section>
+  <% } %>
+</section>
