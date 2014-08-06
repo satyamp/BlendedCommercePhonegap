@@ -10,12 +10,12 @@ class mmpApp.Views.CheckoutView extends Backbone.View
       "blur .checkout--form-input"  : "checkoutMode"
 
     initialize: (@collection) ->
-
-    checkout: (e) ->
-      e.preventDefault()
       $.subscribe "paid", (e, data) =>
         thanksModal = new mmpApp.Views.CheckedOutView()
         thanksModal.render()
+
+    checkout: (e) ->
+      e.preventDefault()
 
       mmpApp.appCart.checkout =>
 
@@ -34,6 +34,13 @@ class mmpApp.Views.CheckoutView extends Backbone.View
 class mmpApp.Views.CheckedOutView extends Backbone.View
 
     template: JST['app/scripts/templates/checkedout.ejs']
+    events:
+      "click .checkout--shipping-list-item"      : "toggleShipping"
+
+    toggleShipping: (e) ->
+      alert "allo allo!"
+      $('.checkout--shipping-list-item').removeClass "active"
+      $(e.currentTarget).addClass "active"
 
     render: ->
       mmpApp.appModal.render @template

@@ -42,7 +42,9 @@
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/scripts \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/styles \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/images/02b39850.Visa.png \
+/Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/images/1b814df9.bag-icon.png \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/images/5c26f99f.screen.png \
+/Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/images/6237d8fd.bringly-logo.png \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/images/7080a0e5.splash.jpg \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/images/f2e333c2.phone.png \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/plugins/com.chariotsolutions.nfc.plugin \
@@ -51,11 +53,11 @@
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/plugins/com.chariotsolutions.nfc.plugin/www/phonegap-nfc.js \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/plugins/org.apache.cordova.device/www \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/plugins/org.apache.cordova.device/www/device.js \
-/Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/scripts/58965a76.main.js \
+/Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/scripts/82640956.main.js \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/scripts/b7cbfccb.vendor.js \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/scripts/vendor \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/scripts/vendor/d7100892.modernizr.js \
-/Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/styles/b34cabb5.main.css \
+/Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/styles/68db95d3.main.css \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/styles/fonts \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/styles/fonts/ACaslonPro-Bold.eot \
 /Users/lnolte/Work/_development/apps/mmp-app/platforms/android/assets/www/styles/fonts/ACaslonPro-Bold.svg \

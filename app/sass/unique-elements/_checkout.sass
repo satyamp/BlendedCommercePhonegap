@@ -69,3 +69,39 @@
   padding: 22px 16px 22px 0
   border: none
   outline: none
+
+#checkout--thanks
+  padding: 2em 1em
+  background: $accent-color
+  color: white
+  .label
+    +opacity(.75)
+
+#checkout--shipping
+  padding: 0.65em .5em 1em
+
+#checkout--shipping-list
+  +clearfix
+  text-align: center
+  list-style: none
+  padding: 1.2em 0 0 0
+  margin: 0
+
+.checkout--shipping-list-item
+  +heading-serif-font
+  float: left
+  width: 50%
+  padding: 100px .5em 0
+  color: transparentize($font-color, .15)
+  +opacity(.4)
+  +transition(all .3s ease-in-out)
+  &:first-child
+    border-right: 1px solid $light-grey
+  &.active
+    +opacity(.9)
+
+#checkout--pickup
+  background: url(../images/bag-icon.png) no-repeat center top
+
+#checkout--bringly
+  background: url(../images/bringly-logo.png) no-repeat center top

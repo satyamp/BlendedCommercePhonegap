@@ -14,6 +14,10 @@ class mmpApp.Views.ProductView extends Backbone.View
       @collection = new mmpApp.Collections.ProductsCollection()
       @collection.on "add change", @render, @
 
+      $.subscribe "showOnScreen", =>
+        @model.showOnScreen () ->
+          alert "Showing on Screen now!"
+
     addModel: (@model) ->
       @collection.fetch()
 
