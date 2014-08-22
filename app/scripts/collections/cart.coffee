@@ -33,6 +33,12 @@ class mmpApp.Collections.CartCollection extends Backbone.Collection
     $.get "#{mmpApp.Settings.defaultUrl}/checkout/#{@identity}.json", (data) =>
       console.log data
 
+  removeProduct: (sku, cb) ->
+    @reset()
+    $.get "#{mmpApp.Settings.defaultUrl}/product/#{sku}/remove.json", (data) =>
+      console.log data
+      cb() if cb?
+
   checkout: (cb) ->
     $.get "#{mmpApp.Settings.defaultUrl}/order.json", { identity: @identity }, (data) =>
       cb data

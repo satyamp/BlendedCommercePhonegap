@@ -8,7 +8,7 @@ class mmpApp.Views.CartbadgeView extends Backbone.View
       "click"      : "showCart"
 
     initialize: (@collection) ->
-      @collection.on "add change", @render, @
+      @collection.on "add remove change sync", @render, @
       @detailView = new mmpApp.Views.CartView @collection
 
     render: ->
@@ -21,9 +21,22 @@ class mmpApp.Views.CartbadgeView extends Backbone.View
 class mmpApp.Views.CartView extends Backbone.View
 
     template: JST['app/scripts/templates/cart.ejs']
+    name: "cart"
 
     initialize: (@collection) ->
+      @collection.on "sync", @checkCart, @
+
+    checkCart: ->
+      if @collection.length is 0
+        mmpApp.appModal.unrender()
+      else
+        if mmpApp.appModal.childView.name is "cart"
+          mmpApp.appModal.update @template collection: @collection
 
     render: ->
-      mmpApp.appModal.render @template collection: @collection
+      mmpApp.appModal.render @template(collection: @collection), this
+
+    itemRemoved: (sku) ->
+      @collection.removeProduct sku, =>
+        @collection.fetch()
 

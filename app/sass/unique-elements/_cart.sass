@@ -1,41 +1,60 @@
-.cart--entry
-  +clearfix
-  padding-bottom: 1em
-  border-bottom: 1px solid $font-color
-  margin-bottom: 1em
-  &.total
-    padding-top: 1em
-    border-top: 1px solid $font-color
-    border-bottom: none
-    margin-top: -1em
-    margin-bottom: 0
+.cart
+  display: table
+  width: 100%
 
-.cart--entry-info
-  float: left
+.cart--entry
+  display: table-row
+
+.cart--entry-info, .cart--entry-quantity, .cart--entry-price
+  display: table-cell
+  padding:
+    bottom: 10px
+    top: 10px
+  border-bottom: 1px solid $white-grey
+  .cart--entry:first-child &
+    padding-top: 0
+  .cart--entry:last-child &
+    padding-bottom: 0
+    border-bottom: none
 
 .cart--entry-name
   margin: 0
+  +heading-serif-font
+  font-size: 15px
   line-height: 1
   text-transform: none
 
-.cart--entry-meta
-  @extend .smaller
-  color: tint($font-color, 20%)
-
 .cart--entry-price
-  float: right
+  +clearfix
+  padding-right: 0
   +heading-serif-font
   font-weight: 600
-  font-size: 1.4em
-  .cart--entry.total &
-    font-size: 1.7em
+  font-size: 1.2em
+
+.cart--entry-price-currency
+  font-weight: 400
+  color: tint($font-color, 35%)
+
+.cart--entry-delete
+  float: right
+  font-weight: 400
+  color: tint($font-color, 60%)
+  cursor: pointer
+
+.cart--total
+  width: 100%
+  text-align: right
+  +heading-serif-font
+  font-weight: 600
+  font-size: 28px
+  line-height: 1
+  background: $white-grey
+  border-top: 1px solid transparentize(black, .95)
 
 .cart--entry-total-label
+  font-size: 14px
   font-weight: 400
-  font-size: .55em
-  text-transform: uppercase
-  color: tint($font-color, 40%)
-  letter-spacing: 0.01em
+  color: tint($font-color, 50%)
 
 .cart--actions
   padding: .5em 1em

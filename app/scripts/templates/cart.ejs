@@ -3,22 +3,21 @@
     <% for(var i=0; i<collection.models.length; i++) { %>
       <div class="cart--entry">
         <div class="cart--entry-info">
-          <h3 class="headline-h3 cart--entry-name"><%= collection.models[i].attributes.name %></h3>
-          <span class="cart--entry-meta">
-            <%= collection.models[i].attributes.quantity %> Stück
-          </span>
+          <h3 class="cart--entry-name"><%= collection.models[i].attributes.name %></h3>
         </div>
         <div class="cart--entry-price">
-          <%= collection.models[i].attributes.total %>€
+          <%= collection.models[i].attributes.total %>
+          <span class="cart--entry-price-currency smaller">€</span>
+          <div class="cart--entry-delete" data-sku="<%= collection.models[i].attributes.sku %>">
+            ×
+          </div>
         </div>
       </div>
     <% } %>
-    <div class="cart--entry total">
-      <div class="cart--entry-price">
-        <span class="cart--entry-total-label">Summe:</span>
-        <%= Math.round(collection.getTotal() * 100) / 100 %>€
-      </div>
-    </div>
+  </section>
+  <section class="cart--total modal--window-content-section">
+    <span class="cart--entry-total-label">Summe:</span>
+    <%= Math.round(collection.getTotal() * 100) / 100 %>€
   </section>
   <div class="cart--actions">
     <a href="#" class="button primary full-width">Zur Kasse</a>
