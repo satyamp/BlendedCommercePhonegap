@@ -5,6 +5,9 @@
   margin: 0 auto
   background: url(../images/phone.png) center center no-repeat
   +background-size(contain)
+  &.small
+    height: 320px
+    margin-bottom: 2em
 
 .interaction-indicator--circle
   position: absolute
@@ -17,6 +20,10 @@
   +border-radius(50%)
   +opacity(.5)
   +transition(all .3s cubic-bezier(0.240, -0.115, 0.735, 0.045))
+  &.outgoing
+    background: transparent
+    border: 5px solid $accent-color
+    +opacity(1)
   .interaction-indicator.active &
     z-index: 9999
     +opacity(1)

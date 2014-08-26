@@ -7,6 +7,7 @@ class mmpApp.Views.ProductView extends Backbone.View
     events:
       "click #addToCart"                  : "addToCart"
       "click #backLink"                   : "back"
+      "click #showOnScreen"               : "showOnScreen"
       "click .related-products--item"     : "viewRelated"
       "click .article--size-picker-size"  : "changeSize"
 
@@ -15,8 +16,10 @@ class mmpApp.Views.ProductView extends Backbone.View
       @collection.on "add change", @render, @
 
       $.subscribe "showOnScreen", =>
+        if @showModal?
+          @showModal.unrender()
         @model.showOnScreen () ->
-          alert "Showing on Screen now!"
+          console.log "Showing on Screen now!"
 
     addModel: (@model) ->
       @collection.fetch()
@@ -55,6 +58,11 @@ class mmpApp.Views.ProductView extends Backbone.View
         thanksModal = new mmpApp.Views.addToCartView @collection
         thanksModal.render()
 
+    showOnScreen: (e) ->
+      e.preventDefault()
+      @showModal = new mmpApp.Views.showOnScreenView
+      @showModal.render()
+
     back: (e) ->
       e.preventDefault()
       mmpApp.appRouter.navigate "/", { trigger: true }
@@ -89,3 +97,14 @@ class mmpApp.Views.addToCartView extends Backbone.View
       e.stopPropagation()
       sku = $(e.currentTarget).data "sku"
       mmpApp.appRouter.navigate "/product/#{sku}", { trigger: true }
+
+# Show on Screen Modal
+class mmpApp.Views.showOnScreenView extends Backbone.View
+
+  template: JST['app/scripts/templates/showOnScreen.ejs']
+
+  render: ->
+    mmpApp.appModal.render @template
+
+  unrender: ->
+    mmpApp.appModal.unrender()
